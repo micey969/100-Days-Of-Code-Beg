@@ -1,7 +1,7 @@
 '''
 100 Days of Code
 
-Day 4 - Tip CalculatorRock Paper Scissors
+Day 4 - Rock Paper Scissors
 '''
 import random
 
@@ -34,40 +34,37 @@ scissors = '''
 
 print("Welcome to Rock, Paper, Scissors")
 choice = int(input("Please enter your choice. Type 0 for Rock, 1 for Paper or 2 for Scissors. "))
+game_choice = [rock, paper, scissors]
+
+print("You chose:")
+print(game_choice[choice])
 
 computer = random.randint(0,2)
+print("\n\nComputer chose:")
+print(game_choice[computer])
 
 match choice:
     case 0: 
         if (computer == 0):
-            print("Draw. You both chose:")
-            print(rock)
+            print("Draw.")
         elif (computer == 1):
             print("Computer wins!!!")
-            print(paper)
         else:
-            print("You win!!! The computer chose")
-            print(scissors)
+            print("You win!!!")
     case 1: 
         if (computer == 1):
-            print("Draw. You both chose:")
-            print(paper)
+            print("Draw.")
         elif (computer == 2):
             print("Computer wins!!!")
-            print(scissors)
         else:
-            print("You win!!! The computer chose")
-            print(rock)
+            print("You win!!!")
     case 2:
         if (computer == 2):
-            print("Draw. You both chose:")
-            print(scissors)
+            print("Draw.")
         elif (computer == 0):
             print("Computer wins!!!")
-            print(rock)
         else:
-            print("You win!!! The computer chose")
-            print(paper)
+            print("You win!!!")
     case default:
         print("This is not a valid option. Sorry, you lose.")
 
